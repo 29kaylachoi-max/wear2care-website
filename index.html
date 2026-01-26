@@ -1,225 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple SD Gothic Neo'}
-    span.s1 {font: 12.0px 'Apple Color Emoji'}
-    span.s2 {font: 12.0px 'Apple SD Gothic Neo'}
-    span.s3 {font: 12.0px Helvetica}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClosticBags | wear2care Global</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #2c3e50; line-height: 1.7; background-color: #ffffff; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; background: white; z-index: 1000; }
+        .logo-text { font-size: 18px; font-weight: 800; color: #1a4a7c; text-decoration: none; }
+        header { padding: 80px 0; text-align: center; background: linear-gradient(to bottom, #f0f7ff, #ffffff); }
+        h1 { font-size: 42px; margin-bottom: 15px; color: #1a1a1a; }
+        .section { padding: 60px 0; border-bottom: 1px solid #f9f9f9; }
+        .lang-split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .lang-box { background: #fcfdfc; padding: 30px; border-radius: 20px; border: 1px solid #f0f0f0; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .team-member { text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 15px; }
+        .team-member img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; background: #eee; }
+        .action-bar { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; display: flex; gap: 10px; }
+        .action-btn { flex: 1; text-align: center; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 700; color: white; }
+        .btn-insta { background: #e1306c; }
+        .btn-form { background: #1a4a7c; }
+        @media (max-width: 768px) { .lang-split { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">    &lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">    &lt;title&gt;ClosticBags | wear2care Global&lt;/title&gt;</p>
-<p class="p1">    &lt;style&gt;</p>
-<p class="p1">        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap');</p>
-<p class="p1">        </p>
-<p class="p1">        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #2c3e50; line-height: 1.7; background-color: #ffffff; word-break: keep-all; }</p>
-<p class="p1">        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }</p>
-<p class="p1">        </p>
-<p class="p1">        /* Navigation */</p>
-<p class="p1">        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; background: white; z-index: 1000; }</p>
-<p class="p1">        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }</p>
-<p class="p1">        .nav-logo img { height: 35px; }</p>
-<p class="p1">        .logo-text { font-size: 18px; font-weight: 800; color: #1a4a7c; }</p>
-<p class="p1">        </p>
-<p class="p1">        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }</p>
-<p class="p1">        nav ul li { margin-left: 20px; }</p>
-<p class="p1">        nav ul li a { text-decoration: none; color: #555; font-size: 13px; font-weight: 600; text-transform: uppercase; }</p>
-<p class="p2"><br></p>
-<p class="p1">        /* Hero Section */</p>
-<p class="p1">        header { padding: 80px 0; text-align: center; background: linear-gradient(to bottom, #f0f7ff, #ffffff); }</p>
-<p class="p1">        .main-logo { width: 150px; margin-bottom: 25px; }</p>
-<p class="p1">        h1 { font-size: 42px; margin-bottom: 15px; color: #1a1a1a; letter-spacing: -1px; }</p>
-<p class="p1">        .tagline { font-size: 18px; color: #555; max-width: 700px; margin: 0 auto 30px; }</p>
-<p class="p2"><br></p>
-<p class="p1">        /* Story &amp; Mission Section */</p>
-<p class="p1">        .section { padding: 80px 0; border-bottom: 1px solid #f9f9f9; }</p>
-<p class="p1">        .section-title { text-align: center; font-size: 28px; margin-bottom: 40px; font-weight: 700; color: #1a1a1a; }</p>
-<p class="p1">        .lang-split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }</p>
-<p class="p1">        .lang-box { background: #fcfdfc; padding: 30px; border-radius: 20px; border: 1px solid #f0f0f0; }</p>
-<p class="p1">        .list-style { padding-left: 20px; margin-top: 15px; }</p>
-<p class="p1">        .list-style li { margin-bottom: 8px; }</p>
-<p class="p2"><br></p>
-<p class="p1">        /* Photo Gallery - Mobile Optimized */</p>
-<p class="p1">        .gallery-region { margin-bottom: 50px; }</p>
-<p class="p1">        .region-label { font-size: 20px; font-weight: 700; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }</p>
-<p class="p1">        .horizontal-scroll { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory; }</p>
-<p class="p1">        .horizontal-scroll::-webkit-scrollbar { height: 6px; }</p>
-<p class="p1">        .horizontal-scroll::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }</p>
-<p class="p1">        .gallery-card { flex: 0 0 280px; scroll-snap-align: start; }</p>
-<p class="p1">        .gallery-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }</p>
-<p class="p2"><br></p>
-<p class="p1">        /* Team Section */</p>
-<p class="p1">        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }</p>
-<p class="p1">        .team-member { text-align: center; padding: 30px 20px; border: 1px solid #eee; border-radius: 20px; background: #fff; }</p>
-<p class="p1">        .team-member img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #f0f7ff; }</p>
-<p class="p1">        .team-member h4 { font-size: 18px; margin: 0; color: #1a1a1a; }</p>
-<p class="p1">        .team-member .position { font-size: 13px; color: #1a4a7c; font-weight: 700; display: block; margin: 5px 0; }</p>
-<p class="p1">        .team-member .school { font-size: 12px; color: #888; margin-bottom: 10px; display: block; }</p>
-<p class="p2"><br></p>
-<p class="p1">        /* Sticky Action Bar */</p>
-<p class="p1">        .action-bar { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; display: flex; gap: 10px; z-index: 2000; }</p>
-<p class="p1">        .action-btn { flex: 1; text-align: center; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: 0.3s; }</p>
-<p class="p1">        .btn-form { background: #1a4a7c; color: white; }</p>
-<p class="p1">        .btn-insta { background: #e1306c; color: white; }</p>
-<p class="p1">        .action-btn:hover { transform: translateY(-3px); }</p>
-<p class="p2"><br></p>
-<p class="p1">        footer { padding: 60px 0 120px; text-align: center; background: #f9fbf9; font-size: 14px; }</p>
-<p class="p2"><br></p>
-<p class="p1">        @media (max-width: 768px) {</p>
-<p class="p1">            .lang-split { grid-template-columns: 1fr; }</p>
-<p class="p1">            h1 { font-size: 32px; }</p>
-<p class="p1">            .nav-logo .logo-text { display: none; }</p>
-<p class="p1">        }</p>
-<p class="p1">    &lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">    &lt;div class="container"&gt;</p>
-<p class="p1">        &lt;nav&gt;</p>
-<p class="p1">            &lt;a href="#" class="nav-logo"&gt;</p>
-<p class="p1">                &lt;img src="logo.png" alt="ClosticBags"&gt;</p>
-<p class="p1">                &lt;span class="logo-text"&gt;CLOSTICBAGS&lt;/span&gt;</p>
-<p class="p1">            &lt;/a&gt;</p>
-<p class="p1">            &lt;ul&gt;</p>
-<p class="p1">                &lt;li&gt;&lt;a href="#story"&gt;Story&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">                &lt;li&gt;&lt;a href="#gallery"&gt;Gallery&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">                &lt;li&gt;&lt;a href="#team"&gt;Team&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">            &lt;/ul&gt;</p>
-<p class="p1">        &lt;/nav&gt;</p>
-<p class="p1">    &lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">    &lt;header&gt;</p>
-<p class="p1">        &lt;div class="container"&gt;</p>
-<p class="p1">            &lt;img src="logo.png" alt="ClosticBags" class="main-logo"&gt;</p>
-<p class="p1">            &lt;h1&gt;To Donate and Save&lt;/h1&gt;</p>
-<p class="p1">            &lt;p class="tagline"&gt;Turning recycled T-shirts into ClosticBags to protect our planet and share kindness. <span class="s1">🌿</span>&lt;/p&gt;</p>
-<p class="p1">        &lt;/div&gt;</p>
-<p class="p1">    &lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">    &lt;div class="container"&gt;</p>
-<p class="p1">        &lt;section id="story" class="section"&gt;</p>
-<p class="p1">            &lt;h2 class="section-title"&gt;<span class="s1">🌿</span> Our Story&lt;/h2&gt;</p>
-<p class="p1">            &lt;div class="lang-split"&gt;</p>
-<p class="p1">                &lt;div class="lang-box"&gt;</p>
-<p class="p1">                    &lt;p&gt;Wear2Care began as a student-led volunteer project that turns old T-shirts into eco-friendly bags. Our goal is simple — to protect the planet and share kindness. The name &lt;strong&gt;‘ClosticBags’&lt;/strong&gt; comes from ‘Cloth + Plastic Bags’, representing our idea of replacing disposable plastic bags in everyday life. Every bag is handmade with care, and all profits are donated to support those in need. Through this project, we hope to show how small actions lead to big change. Let’s shout out “Wear2Care”!&lt;/p&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">                &lt;div class="lang-box"&gt;</p>
-<p class="p1">                    &lt;p&gt;Wear2Care<span class="s2">는</span> <span class="s2">오래된</span> <span class="s2">티셔츠를</span> <span class="s2">친환경</span> <span class="s2">가방으로</span> <span class="s2">재탄생시키는</span> <span class="s2">프로젝트로</span> <span class="s2">시작되었습니다</span>. &lt;strong&gt;Clostic Bags&lt;/strong&gt;<span class="s2">는</span> ‘Cloth + Plastic Bags’<span class="s2">의</span> <span class="s2">의미를</span> <span class="s2">담아</span>, <span class="s2">일회용</span> <span class="s2">비닐봉투를</span> <span class="s2">대신할</span> <span class="s2">수</span> <span class="s2">있는</span> <span class="s2">지속</span> <span class="s2">가능한</span> <span class="s2">선택을</span> <span class="s2">제안합니다</span>. <span class="s2">모든</span> <span class="s2">가방은</span> <span class="s2">손으로</span> <span class="s2">제작되며</span>, <span class="s2">판매</span> <span class="s2">수익은</span> <span class="s2">전액</span> <span class="s2">기부되어</span> <span class="s2">도움이</span> <span class="s2">필요한</span> <span class="s2">곳에</span> <span class="s2">전달됩니다</span>. <span class="s2">작은</span> <span class="s2">실천이</span> <span class="s2">모여</span> <span class="s2">큰</span> <span class="s2">변화를</span> <span class="s2">만든다는</span> <span class="s2">것을</span> <span class="s2">보여주고</span> <span class="s2">싶습니다</span>.&lt;/p&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">            &lt;/div&gt;</p>
-<p class="p1">        &lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">        &lt;section class="section"&gt;</p>
-<p class="p1">            &lt;h2 class="section-title"&gt;<span class="s1">🎯</span> Our Mission&lt;/h2&gt;</p>
-<p class="p1">            &lt;div class="lang-split"&gt;</p>
-<p class="p1">                &lt;div class="lang-box"&gt;</p>
-<p class="p1">                    &lt;p&gt;Our mission is to inspire sustainable habits and empower young people to care for their communities through creativity and action. By turning old T-shirts into Clostic Bags, we aim to:&lt;/p&gt;</p>
-<p class="p1">                    &lt;ul class="list-style"&gt;</p>
-<p class="p1">                        &lt;li&gt;Reduce textile waste&lt;/li&gt;</p>
-<p class="p1">                        &lt;li&gt;Promote reusable alternatives to plastics&lt;/li&gt;</p>
-<p class="p1">                        &lt;li&gt;Raise funds for meaningful organizations&lt;/li&gt;</p>
-<p class="p1">                        &lt;li&gt;Connect students across countries through teamwork&lt;/li&gt;</p>
-<p class="p1">                    &lt;/ul&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">                &lt;div class="lang-box"&gt;</p>
-<p class="p3"><span class="s3">                    &lt;p&gt;</span>우리의<span class="s3"> </span>목표는<span class="s3"> </span>지속<span class="s3"> </span>가능한<span class="s3"> </span>습관을<span class="s3"> </span>장려하고<span class="s3"> </span>창의적인<span class="s3"> </span>활동을<span class="s3"> </span>통해<span class="s3"> </span>지역<span class="s3"> </span>사회를<span class="s3"> </span>돌보는<span class="s3"> </span>것입니다<span class="s3">. </span>티셔츠<span class="s3"> </span>재활용을<span class="s3"> </span>통해<span class="s3"> </span>우리는<span class="s3"> </span>다음과<span class="s3"> </span>같은<span class="s3"> </span>변화를<span class="s3"> </span>꿈꿉니다<span class="s3">:&lt;/p&gt;</span></p>
-<p class="p1">                    &lt;ul class="list-style"&gt;</p>
-<p class="p1">                        &lt;li&gt;<span class="s2">의류</span> <span class="s2">폐기물</span> <span class="s2">감소</span>&lt;/li&gt;</p>
-<p class="p1">                        &lt;li&gt;<span class="s2">일회용</span> <span class="s2">플라스틱을</span> <span class="s2">대체하는</span> <span class="s2">재사용</span> <span class="s2">문화</span> <span class="s2">확산</span>&lt;/li&gt;</p>
-<p class="p1">                        &lt;li&gt;<span class="s2">의미</span> <span class="s2">있는</span> <span class="s2">단체</span> <span class="s2">지원을</span> <span class="s2">위한</span> <span class="s2">기금</span> <span class="s2">마련</span>&lt;/li&gt;</p>
-<p class="p1">                        &lt;li&gt;<span class="s2">국가</span> <span class="s2">간</span> <span class="s2">학생</span> <span class="s2">협력을</span> <span class="s2">통한</span> <span class="s2">서비스</span> <span class="s2">연결</span>&lt;/li&gt;</p>
-<p class="p1">                    &lt;/ul&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">            &lt;/div&gt;</p>
-<p class="p1">        &lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">        &lt;section id="gallery" class="section"&gt;</p>
-<p class="p1">            &lt;h2 class="section-title"&gt;<span class="s1">🖼️</span> Photo Gallery&lt;/h2&gt;</p>
-<p class="p1">            </p>
-<p class="p1">            &lt;div class="gallery-region"&gt;</p>
-<p class="p1">                &lt;div class="region-label"&gt;<span class="s1">🇰🇷</span> South Korea HQ&lt;/div&gt;</p>
-<p class="p1">                &lt;div class="horizontal-scroll"&gt;</p>
-<p class="p1">                    &lt;div class="gallery-card"&gt;&lt;img src="kr1.jpg" alt="Korea 1"&gt;&lt;/div&gt;</p>
-<p class="p1">                    &lt;div class="gallery-card"&gt;&lt;img src="kr2.jpg" alt="Korea 2"&gt;&lt;/div&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">            &lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">            &lt;div class="gallery-region"&gt;</p>
-<p class="p1">                &lt;div class="region-label"&gt;<span class="s1">🇺🇸</span> United States&lt;/div&gt;</p>
-<p class="p1">                &lt;div class="horizontal-scroll"&gt;</p>
-<p class="p1">                    &lt;div class="gallery-card"&gt;&lt;img src="us1.jpg" alt="USA 1"&gt;&lt;/div&gt;</p>
-<p class="p1">                    &lt;div class="gallery-card"&gt;&lt;img src="us2.jpg" alt="USA 2"&gt;&lt;/div&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">            &lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">            &lt;div class="gallery-region"&gt;</p>
-<p class="p1">                &lt;div class="region-label"&gt;<span class="s1">🇭🇰</span> Hong Kong&lt;/div&gt;</p>
-<p class="p1">                &lt;div class="horizontal-scroll"&gt;</p>
-<p class="p1">                    &lt;div class="gallery-card"&gt;&lt;img src="hk1.jpg" alt="HK 1"&gt;&lt;/div&gt;</p>
-<p class="p1">                    &lt;div class="gallery-card"&gt;&lt;img src="hk2.jpg" alt="HK 2"&gt;&lt;/div&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">            &lt;/div&gt;</p>
-<p class="p1">        &lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">        &lt;section id="team" class="section"&gt;</p>
-<p class="p1">            &lt;h2 class="section-title"&gt;<span class="s1">👤</span> Meet the Team&lt;/h2&gt;</p>
-<p class="p1">            &lt;div class="team-grid"&gt;</p>
-<p class="p1">                &lt;div class="team-member"&gt;</p>
-<p class="p1">                    &lt;img src="ava.jpg" alt="Ava Choi"&gt;</p>
-<p class="p1">                    &lt;h4&gt;Ava Choi&lt;/h4&gt;</p>
-<p class="p1">                    &lt;span class="position"&gt;Global Founder / President&lt;/span&gt;</p>
-<p class="p1">                    &lt;span class="school"&gt;9th, Yongsan International School of Seoul&lt;/span&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">                &lt;div class="team-member"&gt;</p>
-<p class="p1">                    &lt;img src="kayla.jpg" alt="Kayla Choi"&gt;</p>
-<p class="p1">                    &lt;h4&gt;Kayla Choi&lt;/h4&gt;</p>
-<p class="p1">                    &lt;span class="position"&gt;Global Founder / Executive Director&lt;/span&gt;</p>
-<p class="p1">                    &lt;span class="school"&gt;9th, Yongsan International School of Seoul&lt;/span&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">                &lt;div class="team-member"&gt;</p>
-<p class="p1">                    &lt;img src="sue.jpg" alt="Sue Lee"&gt;</p>
-<p class="p1">                    &lt;h4&gt;Sue Lee&lt;/h4&gt;</p>
-<p class="p1">                    &lt;span class="position"&gt;Creative Director / USA President&lt;/span&gt;</p>
-<p class="p1">                    &lt;span class="school"&gt;9th, Marlborough School, California&lt;/span&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">                &lt;div class="team-member"&gt;</p>
-<p class="p1">                    &lt;img src="abby.jpg" alt="Abby Lee"&gt;</p>
-<p class="p1">                    &lt;h4&gt;Abby Lee&lt;/h4&gt;</p>
-<p class="p1">                    &lt;span class="position"&gt;Communication Director / HK President&lt;/span&gt;</p>
-<p class="p1">                    &lt;span class="school"&gt;9th Grade, Hong Kong&lt;/span&gt;</p>
-<p class="p1">                &lt;/div&gt;</p>
-<p class="p1">            &lt;/div&gt;</p>
-<p class="p1">        &lt;/section&gt;</p>
-<p class="p1">    &lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">    &lt;div class="action-bar"&gt;</p>
-<p class="p1">        &lt;a href="https://instagram.com/wear2care_25" target="_blank" class="action-btn btn-insta"&gt;Instagram @wear2care_25&lt;/a&gt;</p>
-<p class="p1">        &lt;a href="https://forms.google.com/YOUR_FORM_LINK" target="_blank" class="action-btn btn-form"&gt;Order Now&lt;/a&gt;</p>
-<p class="p1">    &lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">    &lt;footer&gt;</p>
-<p class="p1">        &lt;div class="container"&gt;</p>
-<p class="p1">            &lt;img src="logo.png" alt="ClosticBags" style="height: 40px; margin-bottom: 20px; opacity: 0.7;"&gt;</p>
-<p class="p1">            &lt;p&gt;&lt;strong&gt;wear2care Global Project&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1">            &lt;p&gt;Contact: info@closticbags.com&lt;/p&gt;</p>
-<p class="p1">            &lt;p style="margin-top: 15px; opacity: 0.6;"&gt;&amp;copy; 2026 wear2care. Let’s shout out “Wear2Care” <span class="s1">🌿</span>&lt;/p&gt;</p>
-<p class="p1">        &lt;/div&gt;</p>
-<p class="p1">    &lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="container">
+        <nav><a href="#" class="logo-text">CLOSTICBAGS</a></nav>
+    </div>
+    <header>
+        <div class="container">
+            <h1>To Donate and Save</h1>
+            <p>버려지는 옷을 활용해 지구를 지키는 <strong>ClosticBags</strong> 프로젝트입니다.</p>
+        </div>
+    </header>
+    <div class="container">
+        <section class="section">
+            <h2 style="text-align:center;">🌿 Our Story</h2>
+            <div class="lang-split">
+                <div class="lang-box">
+                    <p>Wear2Care began as a student-led volunteer project that turns old T-shirts into eco-friendly bags. The name <strong>‘ClosticBags’</strong> comes from ‘Cloth + Plastic Bags’, representing our idea of replacing disposable plastic bags in everyday life.</p>
+                </div>
+                <div class="lang-box">
+                    <p>Wear2Care는 오래된 티셔츠를 친환경 가방으로 재탄생시키는 프로젝트입니다. <strong>Clostic Bags</strong>는 ‘Cloth + Plastic Bags’의 의미를 담아 일회용 비닐봉투를 대신할 지속 가능한 선택을 제안합니다.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 style="text-align:center;">👤 Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member"><img src="ava.jpg"><h4>Ava Choi</h4><span>Global Founder</span></div>
+                <div class="team-member"><img src="kayla.jpg"><h4>Kayla Choi</h4><span>Global Founder</span></div>
+                <div class="team-member"><img src="sue.jpg"><h4>Sue Lee</h4><span>USA President</span></div>
+                <div class="team-member"><img src="abby.jpg"><h4>Abby Lee</h4><span>HK President</span></div>
+            </div>
+        </section>
+    </div>
+    <div class="action-bar">
+        <a href="https://instagram.com/wear2care_25" class="action-btn btn-insta">Instagram</a>
+        <a href="#" class="action-btn btn-form">Order Now</a>
+    </div>
 </body>
 </html>
