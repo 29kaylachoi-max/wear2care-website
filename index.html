@@ -7,51 +7,56 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         
-        /* 기본 스타일 */
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #2c3e50; line-height: 1.7; background-color: #ffffff; scroll-behavior: smooth; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        /* 기본 테마 */
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #2c3e50; line-height: 1.8; background-color: #ffffff; scroll-behavior: smooth; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 25px; }
         
-        /* 메뉴 바 (Navigation) */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 1000; backdrop-filter: blur(5px); }
-        .logo-text { font-size: 18px; font-weight: 800; color: #1a4a7c; text-decoration: none; letter-spacing: 1px; }
-        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        /* 메뉴 바 */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; background: rgba(255,255,255,0.98); z-index: 1000; }
+        .logo-text { font-size: 20px; font-weight: 800; color: #1a4a7c; text-decoration: none; letter-spacing: 1px; }
+        .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #555; font-weight: 600; font-size: 15px; transition: 0.3s; }
         .nav-links a:hover { color: #1a4a7c; }
-        
-        /* 헤더 (Hero) */
-        header { padding: 100px 0 60px; text-align: center; background: linear-gradient(to bottom, #f0f7ff, #ffffff); }
-        h1 { font-size: 48px; margin-bottom: 15px; color: #1a1a1a; letter-spacing: -1.5px; }
-        .tagline { font-size: 18px; color: #555; max-width: 700px; margin: 0 auto 30px; }
 
-        /* 공통 섹션 스타일 */
-        .section { padding: 80px 0; border-bottom: 1px solid #f9f9f9; }
-        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; font-weight: 700; color: #1a1a1a; }
+        /* 메인 홈 (Our Story 강조) */
+        .home-hero { padding: 120px 0 80px; text-align: center; background: linear-gradient(to bottom, #f4f9ff, #ffffff); }
+        .home-hero h1 { font-size: 56px; margin-bottom: 20px; color: #1a1a1a; letter-spacing: -2px; }
+        .story-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; text-align: left; }
+        .story-box { background: white; padding: 40px; border-radius: 30px; border: 1px solid #eee; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        .story-box h3 { color: #1a4a7c; margin-top: 0; }
 
-        /* Our Mission 섹션 */
-        .lang-split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .lang-box { background: #fcfdfc; padding: 40px; border-radius: 25px; border: 1px solid #f0f0f0; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
-        
-        /* Members 섹션 (추가 용이하게 설계) */
-        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin-top: 40px; }
-        .member-card { text-align: center; padding: 30px 20px; border: 1px solid #eee; border-radius: 20px; background: #fff; transition: 0.3s; }
-        .member-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #f0f7ff; border: 3px solid #f0f7ff; }
-        .member-card h4 { font-size: 18px; margin: 10px 0 5px; }
-        .member-card .role { font-size: 13px; color: #1a4a7c; font-weight: 700; }
+        /* 섹션 공통 스타일 */
+        .section { padding: 100px 0; border-bottom: 1px solid #f9f9f9; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 50px; font-weight: 800; color: #1a1a1a; }
 
-        /* Gallery 섹션 (추가 용이하게 설계) */
+        /* Our Mission 리스트 스타일 */
+        .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .mission-content ul { padding-left: 20px; }
+        .mission-content li { margin-bottom: 12px; font-weight: 500; }
+
+        /* Members 카드 스타일 */
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .member-card { text-align: center; padding: 40px 25px; border: 1px solid #eee; border-radius: 25px; background: #fff; transition: 0.3s; }
+        .member-card img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid #f0f7ff; }
+        .member-card h4 { font-size: 20px; margin: 10px 0 5px; }
+        .member-card .role { font-size: 14px; color: #1a4a7c; font-weight: 700; display: block; margin-bottom: 5px; }
+        .member-card .school { font-size: 13px; color: #888; line-height: 1.4; }
+
+        /* Gallery 스타일 */
+        .gallery-category { margin-bottom: 50px; }
+        .gallery-category h3 { font-size: 22px; border-left: 5px solid #1a4a7c; padding-left: 15px; margin-bottom: 20px; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 15px; height: 250px; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item { border-radius: 15px; overflow: hidden; height: 250px; background: #f9f9f9; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* 하단 고정 버튼 */
-        .action-bar { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; display: flex; gap: 15px; z-index: 2000; }
-        .action-btn { flex: 1; text-align: center; padding: 18px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: 0.3s; }
-        .btn-form { background: #1a4a7c; color: white; }
-        .btn-insta { background: #e1306c; color: white; }
-        
-        @media (max-width: 768px) { .lang-split { grid-template-columns: 1fr; } .nav-links { display: none; } }
+        /* 하단 액션 바 및 연락처 */
+        .action-bar { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 600px; display: flex; gap: 10px; z-index: 2000; }
+        .action-btn { flex: 1; text-align: center; padding: 18px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); color: white; }
+        .btn-insta { background: #e1306c; }
+        .btn-form { background: #1a4a7c; }
+        .btn-email { background: #333; }
+
+        @media (max-width: 768px) { .story-container, .mission-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
@@ -63,73 +68,113 @@
                 <li><a href="#mission">Our Mission</a></li>
                 <li><a href="#members">Members</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="mailto:info@closticbags.com">Contact</a></li>
             </ul>
         </nav>
     </div>
 
-    <header>
+    <section id="home" class="home-hero">
         <div class="container">
             <h1>To Donate and Save</h1>
-            <p class="tagline">Turning recycled T-shirts into ClosticBags to protect our planet. 🌿</p>
+            <p style="font-size: 20px; color: #666;">“Wear2Care” — Small actions leading to big change. 🌿</p>
+            
+            <div class="story-container">
+                <div class="story-box">
+                    <h3>🍀 Our Story (EN)</h3>
+                    <p>Wear2Care began as a student-led volunteer project that turns old T-shirts into eco-friendly bags. Our goal is simple — to protect the planet and share kindness. The name <strong>‘ClosticBags’</strong> comes from ‘Cloth + Plastic Bags’, representing our idea of turning recycled T-shirts into reusables that can replace disposable plastic bags in everyday life. Every bag is handmade with care, and all profits are donated to support those in need.</p>
+                </div>
+                <div class="story-box">
+                    <h3>🌿 Our Story (KR)</h3>
+                    <p>Wear2Care는 오래된 티셔츠를 친환경 가방으로 재탄생시키는 프로젝트로 시작되었습니다. 이렇게 만들어진 <strong>Clostic Bags</strong>는 ‘Cloth + Plastic Bags’의 의미를 담아, 일회용 비닐봉투를 대신할 수 있는 지속 가능한 선택을 제안합니다. 모든 가방은 손으로 제작되며, 판매 수익은 전액 기부됩니다.</p>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
     <div class="container">
         <section id="mission" class="section">
-            <h2 class="section-title">Our Mission</h2>
-            <div class="lang-split">
-                <div class="lang-box">
-                    <p>Wear2Care began as a student-led volunteer project that turns old T-shirts into eco-friendly bags. The name <strong>‘ClosticBags’</strong> (Cloth + Plastic Bags) represents our idea of replacing disposable plastic bags in everyday life.</p>
+            <h2 class="section-title">🍀 Our Mission</h2>
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <p>Our mission is to inspire sustainable habits and empower young people to care for their communities through creativity and action. We aim to:</p>
+                    <ul>
+                        <li>Reduce textile waste</li>
+                        <li>Promote reusable alternatives to single-use plastics</li>
+                        <li>Raise funds for meaningful organizations</li>
+                        <li>Connect students across countries through teamwork and service</li>
+                    </ul>
                 </div>
-                <div class="lang-box">
-                    <p>Wear2Care는 낡은 티셔츠를 친환경 가방으로 재탄생시키는 프로젝트입니다. <strong>Clostic Bags</strong>는 비닐봉투를 대신할 지속 가능한 대안을 제안하며, 모든 수익은 기부됩니다.</p>
+                <div class="mission-content" style="background: #f9fbf9; padding: 30px; border-radius: 20px;">
+                    <p>우리의 목표는 작은 실천으로 큰 변화를 만드는 것입니다. 우리는 티셔츠 재활용을 통해 폐기물을 줄이고, 재사용 문화를 확산하며, 기부금을 모아 의미 있는 단체를 지원합니다. Clostic Bags 한 개가 더 나은 세상을 향한 한 걸음이 되길 바랍니다.</p>
                 </div>
             </div>
         </section>
 
         <section id="members" class="section">
-            <h2 class="section-title">Meet Our Members</h2>
+            <h2 class="section-title">👤 Members</h2>
             <div class="grid-layout">
                 <div class="member-card">
                     <img src="ava.jpg">
                     <h4>Ava Choi</h4>
-                    <span class="role">Global Founder</span>
+                    <span class="role">Global Founder / President</span>
+                    <span class="school">9th, Yongsan International School of Seoul, Korea</span>
                 </div>
                 <div class="member-card">
                     <img src="kayla.jpg">
                     <h4>Kayla Choi</h4>
-                    <span class="role">Global Founder</span>
+                    <span class="role">Global Founder / Executive Director</span>
+                    <span class="school">9th, Yongsan International School of Seoul, Korea</span>
                 </div>
                 <div class="member-card">
                     <img src="sue.jpg">
                     <h4>Sue Lee</h4>
-                    <span class="role">USA President</span>
+                    <span class="role">Creative Director & President (USA)</span>
+                    <span class="school">9th, Marlborough School, California, USA</span>
                 </div>
                 <div class="member-card">
                     <img src="abby.jpg">
                     <h4>Abby Lee</h4>
-                    <span class="role">HK President</span>
+                    <span class="role">Communication Director & President (HK)</span>
+                    <span class="school">9th Grade, Hong Kong</span>
                 </div>
-                </div>
+            </div>
         </section>
 
         <section id="gallery" class="section">
-            <h2 class="section-title">Activity Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="kr1.jpg"></div>
-                <div class="gallery-item"><img src="us1.jpg"></div>
-                <div class="gallery-item"><img src="hk1.jpg"></div>
+            <h2 class="section-title">Photo Gallery</h2>
+            
+            <div class="gallery-category">
+                <h3>🇰🇷 Korea</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="kr1.jpg"></div>
+                    <div class="gallery-item"><img src="kr2.jpg"></div>
                 </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🇺🇸 United States</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="us1.jpg"></div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3>🇭🇰 Hong Kong</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="hk1.jpg"></div>
+                </div>
+            </div>
         </section>
     </div>
 
     <div class="action-bar">
         <a href="https://instagram.com/wear2care_25" target="_blank" class="action-btn btn-insta">Instagram</a>
-        <a href="#" class="action-btn btn-form">Order Now</a>
+        <a href="#" target="_blank" class="action-btn btn-form">Order Now (Form)</a>
+        <a href="mailto:info@closticbags.com" class="action-btn btn-email">Contact Us</a>
     </div>
 
-    <footer style="text-align: center; padding: 100px 0; color: #aaa; font-size: 14px;">
-        &copy; 2026 wear2care Global Project.
+    <footer style="text-align: center; padding: 100px 0; color: #ccc; font-size: 13px;">
+        &copy; 2026 wear2care Global Project. info@closticbags.com
     </footer>
 
 </body>
