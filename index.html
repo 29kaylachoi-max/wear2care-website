@@ -13,38 +13,41 @@
         /* 메뉴 바 및 로고 배너 설정 */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; background: rgba(255,255,255,0.98); z-index: 1000; }
         
-        .logo-container { height: 50px; display: flex; align-items: center; }
-        .logo-container img { height: 100%; width: auto; max-width: 250px; object-fit: contain; } /* 로고가 가로로 길어도 비율 유지 */
+        .logo-container { height: 50px; display: flex; align-items: center; text-decoration: none; }
+        .logo-container img { height: 100%; width: auto; max-width: 250px; object-fit: contain; }
 
         .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
         .nav-links a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        .nav-links a:hover { color: #1a4a7c; }
 
-        /* 메인 홈 */
+        /* 메인 홈 (Our Story) */
         .home-hero { padding: 100px 0 60px; text-align: center; background: linear-gradient(to bottom, #f4f9ff, #ffffff); }
         .home-hero h1 { font-size: clamp(32px, 5vw, 56px); margin-bottom: 20px; color: #1a1a1a; letter-spacing: -2px; }
         .story-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; text-align: left; }
-        .story-box { background: white; padding: 35px; border-radius: 25px; border: 1px solid #eee; }
+        .story-box { background: white; padding: 35px; border-radius: 25px; border: 1px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
 
         /* 섹션 공통 */
         .section { padding: 80px 0; border-bottom: 1px solid #f9f9f9; }
         .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; font-weight: 800; }
 
-        /* Members 사진 사이즈 고정 (절대 안 커지게) */
+        /* Members 사진 사이즈 고정 */
         .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
-        .member-card { text-align: center; padding: 30px 20px; border: 1px solid #eee; border-radius: 20px; background: #fff; }
+        .member-card { text-align: center; padding: 30px 20px; border: 1px solid #eee; border-radius: 20px; background: #fff; transition: 0.3s; }
+        .member-card:hover { transform: translateY(-5px); }
         .member-card .img-wrapper { width: 140px; height: 140px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 4px solid #f0f7ff; }
-        .member-card img { width: 100%; height: 100%; object-fit: cover; } /* 사진을 동그란 틀에 꽉 채움 */
-        .member-card .school { font-size: 12px; color: #888; margin-top: 10px; display: block; }
+        .member-card img { width: 100%; height: 100%; object-fit: cover; }
+        .member-card .school { font-size: 12px; color: #888; margin-top: 10px; display: block; line-height: 1.4; }
 
-        /* Gallery 사진 사이즈 고정 (일정한 높이) */
+        /* Gallery 사진 사이즈 고정 */
         .gallery-category { margin-bottom: 40px; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
         .gallery-item { border-radius: 12px; overflow: hidden; height: 220px; background: #f9f9f9; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; } /* 큰 사진도 틀에 맞춰 잘림 */
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.05); }
 
-        /* 하단 버튼 */
+        /* 하단 액션 버튼 */
         .action-bar { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 600px; display: flex; gap: 10px; z-index: 2000; }
-        .action-btn { flex: 1; text-align: center; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 13px; color: white; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .action-btn { flex: 1; text-align: center; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 13px; color: white; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: 0.3s; }
         .btn-insta { background: #e1306c; }
         .btn-form { background: #1a4a7c; }
         .btn-email { background: #333; }
@@ -89,24 +92,23 @@
     <div class="container">
         <section id="mission" class="section">
             <h2 class="section-title">🍀 Our Mission</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Our mission is to inspire sustainable habits and empower young people to care for their communities through creativity and action.</p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                 <div style="background:#fcfdfc; padding:30px; border-radius:20px;">
-                    <strong>By turning old T-shirts into Clostic Bags, we aim to:</strong>
-                    <ul style="margin-top:15px;">
+                    <strong>Our Goals:</strong>
+                    <ul style="margin-top:15px; font-size:14px;">
                         <li>Reduce textile waste</li>
-                        <li>Promote reusable alternatives</li>
-                        <li>Raise funds for organizations</li>
-                        <li>Connect students globally</li>
+                        <li>Promote reusable alternatives to single-use plastics</li>
+                        <li>Raise funds for meaningful organizations</li>
+                        <li>Connect students across countries through teamwork</li>
                     </ul>
                 </div>
                 <div style="background:#f9f9f9; padding:30px; border-radius:20px;">
-                    <strong>티셔츠 재활용을 통해 우리가 지향하는 가치:</strong>
-                    <ul style="margin-top:15px;">
+                    <strong>우리의 목표:</strong>
+                    <ul style="margin-top:15px; font-size:14px;">
                         <li>섬유 폐기물 감소 및 환경 보호</li>
                         <li>일회용 플라스틱 대체 문화 확산</li>
                         <li>의미 있는 단체를 위한 기부금 모금</li>
-                        <li>글로벌 학생 네트워크 및 봉사 협력</li>
+                        <li>국가 간 학생 네트워크 및 협력 강화</li>
                     </ul>
                 </div>
             </div>
@@ -116,14 +118,14 @@
             <h2 class="section-title">👤 Members</h2>
             <div class="grid-layout">
                 <div class="member-card">
-                    <div class="img-wrapper"><img src="ava.jpg"></div>
-                    <h4>Ava Choi</h4>
+                    <div class="img-wrapper"><img src="kayla.jpg"></div>
+                    <h4>Kayla Choi</h4>
                     <span class="role">Global Founder / President</span>
                     <span class="school">9th, Yongsan International School of Seoul</span>
                 </div>
                 <div class="member-card">
-                    <div class="img-wrapper"><img src="kayla.jpg"></div>
-                    <h4>Kayla Choi</h4>
+                    <div class="img-wrapper"><img src="ava.jpg"></div>
+                    <h4>Ava Choi</h4>
                     <span class="role">Global Founder / Executive Director</span>
                     <span class="school">9th, Yongsan International School of Seoul</span>
                 </div>
@@ -145,15 +147,9 @@
         <section id="gallery" class="section">
             <h2 class="section-title">Photo Gallery</h2>
             <div class="gallery-category">
-                <h3 style="font-size:18px; color:#1a4a7c; margin-bottom:15px;">📍 Korea</h3>
+                <h3 style="font-size:18px; color:#1a4a7c; margin-bottom:15px;">📍 Activity Locations</h3>
                 <div class="gallery-grid">
                     <div class="gallery-item"><img src="kr1.jpg"></div>
-                    <div class="gallery-item"><img src="kr2.jpg"></div>
-                </div>
-            </div>
-            <div class="gallery-category">
-                <h3 style="font-size:18px; color:#1a4a7c; margin-bottom:15px;">📍 United States / Hong Kong</h3>
-                <div class="gallery-grid">
                     <div class="gallery-item"><img src="us1.jpg"></div>
                     <div class="gallery-item"><img src="hk1.jpg"></div>
                 </div>
