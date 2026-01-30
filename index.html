@@ -2,78 +2,62 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ClosticBags | wear2care</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
         
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #fff; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+        /* 기본 설정 */
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.5; background-color: #fff; -webkit-text-size-adjust: 100%; }
+        img { max-width: 100%; height: auto; }
+        .container { padding: 0 20px; }
 
-        /* 네비게이션 */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
-        .logo-container img { height: 30px; width: auto; }
+        /* 네비게이션 - 모바일에서 메뉴가 너무 작지 않게 */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-bottom: 1px solid #eee; background: #fff; }
+        .logo-container img { height: 40px; width: auto; }
         .nav-links { display: flex; gap: 15px; list-style: none; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: #1a4a7c; font-size: 15px; font-weight: 700; }
+        .nav-links a { text-decoration: none; color: #1a4a7c; font-size: 16px; font-weight: 700; }
 
-        /* 히어로 섹션 - 텍스트 크기 상향 */
-        .hero { padding: 40px 15px; text-align: center; background: #f0f7ff; }
-        .hero h1 { font-size: 28px; font-weight: 800; margin-bottom: 15px; color: #1a1a1a; word-break: keep-all; }
-        .donation-badge { display: inline-block; background: #ff4757; color: #fff; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 800; margin-bottom: 20px; }
+        /* 상단 히어로 섹션 - 글자 크기 대폭 상향 */
+        .hero { padding: 40px 20px; text-align: center; background: #f0f7ff; }
+        .donation-badge { display: inline-block; background: #ff4757; color: #fff; padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: 800; margin-bottom: 15px; }
+        .hero h1 { font-size: 32px; font-weight: 800; margin: 0 0 20px 0; color: #1a1a1a; line-height: 1.2; }
+        
+        .story-box { background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #eee; text-align: left; }
+        .story-box h2 { font-size: 22px; color: #1a4a7c; margin-top: 0; }
+        .story-box p { font-size: 17px; color: #444; margin: 0; line-height: 1.6; }
 
-        /* Our Story */
-        .story-box { background: #fff; padding: 25px; border-radius: 20px; text-align: left; border: 1px solid #eee; }
-        .story-box h2 { color: #1a4a7c; font-size: 22px; margin-bottom: 15px; }
-        .story-box p { font-size: 16px; color: #444; line-height: 1.7; }
+        /* 섹션 타이틀 */
+        .section-title { font-size: 26px; font-weight: 800; text-align: center; margin: 40px 0 25px 0; color: #1a4a7c; }
 
-        /* 섹션 공통 */
-        .section { padding: 50px 0; border-bottom: 1px solid #f0f0f0; }
-        .section-title { font-size: 24px; font-weight: 800; margin-bottom: 30px; text-align: center; color: #1a4a7c; }
-
-        /* ⭐ 가방 그리드 - 모바일 무조건 2열 고정 */
+        /* ⭐ 가방 그리드 - 모바일에서 무조건 한 줄에 2개씩! */
         .bag-grid { 
             display: grid; 
-            grid-template-columns: repeat(2, 1fr); /* 무조건 2열 */
-            gap: 12px; 
-            margin: 0 auto; 
+            grid-template-columns: 1fr 1fr; /* 50%씩 딱 나눔 */
+            gap: 15px; 
+            margin-bottom: 40px;
         }
-        .style-card { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; text-align: center; padding-bottom: 12px; }
+        .style-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; text-align: center; background: #fff; }
         
-        /* 사진 크기 조절 (틀 안에서 안 잘리게) */
+        /* 사진 크기가 너무 커지지 않게 고정 */
         .style-card img { 
             width: 100%; 
-            height: 140px; /* 모바일에서 적당한 높이 */
-            object-fit: contain; 
-            background-color: #fcfcfc;
+            height: 160px; /* 모바일에서 적당한 높이 */
+            object-fit: cover; 
             display: block;
         }
-        .style-card h4 { margin: 10px 0 5px; font-size: 16px; color: #1a4a7c; }
-        .style-card p { font-size: 13px; color: #777; margin: 0; }
+        .style-card h4 { font-size: 17px; margin: 10px 0; color: #1a4a7c; }
 
-        /* ⭐ 팀 그리드 - 모바일 2열 고정 */
-        .member-grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 12px; 
-        }
-        .member-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 15px 5px; text-align: center; }
-        .member-img-wrapper { width: 80px; height: 80px; margin: 0 auto 10px; border-radius: 50%; overflow: hidden; border: 2px solid #f0f7ff; }
-        .member-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .member-card h4 { font-size: 15px; margin: 5px 0; color: #1a1a1a; }
-        .member-card .role { font-size: 12px; color: #1a4a7c; font-weight: 700; display: block; height: 32px; }
-
-        /* 하단 버튼 바 */
-        .action-bar { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; background: #fff; padding: 12px; box-sizing: border-box; gap: 10px; border-top: 1px solid #eee; z-index: 1000; }
-        .btn { flex: 1; padding: 15px 0; border-radius: 10px; font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; }
+        /* 하단 고정 버튼 */
+        .action-bar { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; background: #fff; padding: 15px; box-sizing: border-box; gap: 10px; border-top: 1px solid #eee; }
+        .btn { flex: 1; padding: 16px 0; border-radius: 10px; font-size: 16px; font-weight: 800; text-align: center; text-decoration: none; }
         .btn-fill { background: #1a4a7c; color: #fff; }
         .btn-insta { background: #e1306c; color: #fff; }
 
-        /* 데스크탑 버전 (화면이 클 때) */
+        /* 화면이 큰 PC용 설정 */
         @media (min-width: 768px) {
-            .hero h1 { font-size: 42px; }
-            .bag-grid { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
-            .member-grid { grid-template-columns: repeat(4, 1fr); }
-            .style-card img { height: 200px; }
+            .container { max-width: 800px; margin: 0 auto; }
+            .bag-grid { max-width: 600px; margin: 0 auto 40px; }
         }
     </style>
 </head>
@@ -81,71 +65,37 @@
 
     <nav>
         <div class="logo-container"><img src="logo.png" alt="ClosticBags Logo"></div>
-        <ul class="nav-links">
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="YOUR_NOTION_URL" target="_blank" style="color: #2eaadc;">Journey ↗</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="YOUR_NOTION_URL" target="_blank" style="color: #2eaadc;">Journey ↗</a>
+        </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <div class="donation-badge">❤ 100% OF PROFITS DONATED</div>
-            <h1>To Donate and Save</h1>
-            <div class="story-box">
-                <h2>Our Story</h2>
-                <p>
-                    <b>ClosticBags</b> (Cloth + Plastic bag) transforms old T-shirts into reusable bags to save our planet. 
-                    All profits support those in need. 🌿
-                </p>
-            </div>
+        <div class="donation-badge">❤ 100% OF PROFITS DONATED</div>
+        <h1>To Donate and Save</h1>
+        <div class="story-box">
+            <h2>Our Story</h2>
+            <p>
+                <b>ClosticBags</b> (Cloth + Plastic bag) transforms old T-shirts into reusable bags to save our planet. All profits support those in need. 🌿
+            </p>
         </div>
     </header>
 
     <div class="container">
-        <section id="shop" class="section">
-            <h2 class="section-title">Select Your Style</h2>
-            <div class="bag-grid">
-                <div class="style-card">
-                    <img src="fringe_bag.jpg" alt="Fringe Style">
-                    <h4>Fringe Style</h4>
-                    <p>Bohemian Style</p>
-                </div>
-                <div class="style-card">
-                    <img src="clean_bag.jpg" alt="Clean Style">
-                    <h4>Clean Style</h4>
-                    <p>Simple & Daily</p>
-                </div>
+        <h2 class="section-title">Select Your Style</h2>
+        <div class="bag-grid">
+            <div class="style-card">
+                <img src="fringe_bag.jpg" alt="Fringe Style">
+                <h4>Fringe Style</h4>
             </div>
-        </section>
-
-        <section id="members" class="section" style="padding-bottom: 100px;">
-            <h2 class="section-title">Meet Our Team</h2>
-            <div class="member-grid">
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="kayla.jpg" alt="Kayla"></div>
-                    <h4>Kayla Choi</h4>
-                    <span class="role">Founder / President</span>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="ava.jpg" alt="Ava"></div>
-                    <h4>Ava Choi</h4>
-                    <span class="role">Founder / Director</span>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="sue.jpg" alt="Sue"></div>
-                    <h4>Sue Lee</h4>
-                    <span class="role">USA President</span>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="abby.jpg" alt="Abby"></div>
-                    <h4>Abby Lee</h4>
-                    <span class="role">HK President</span>
-                </div>
+            <div class="style-card">
+                <img src="clean_bag.jpg" alt="Clean Style">
+                <h4>Clean Style</h4>
             </div>
-        </section>
+        </div>
     </div>
 
-    <div class="action-bar">
+    <div style="height: 100px;"></div> <div class="action-bar">
         <a href="https://instagram.com/wear2care_25" target="_blank" class="btn btn-insta">Instagram</a>
         <a href="YOUR_GOOGLE_FORM_URL" target="_blank" class="btn btn-fill">Order Now</a>
     </div>
