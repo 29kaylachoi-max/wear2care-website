@@ -2,120 +2,129 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ClosticBags</title>
     <style>
+        /* 1. 모바일 최적화 강제 설정 */
         * { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
-        body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; overflow-x: hidden; }
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; line-height: 1.4; }
 
-        /* 1. 최상단 직각 배너 */
-        .top-banner { width: 100%; background: #fff; border-bottom: 1px solid #eee; text-align: center; }
-        .top-banner img { width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; }
+        /* 2. 최상단 배너 */
+        .top-banner { width: 100%; border-bottom: 1px solid #eee; text-align: center; }
+        .top-banner img { width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto; }
 
-        /* 2. 메뉴바 고정 */
-        nav { 
+        /* 3. 메뉴바 (절대 사라지지 않게 강제 설정) */
+        .main-nav { 
             display: flex !important; 
-            justify-content: space-between; 
+            justify-content: space-between !important; 
             align-items: center; 
-            padding: 10px 20px; 
-            background: #fff; 
-            border-bottom: 2px solid #1a4a7c;
+            padding: 15px 20px !important; 
+            background: #ffffff !important; 
+            border-bottom: 3px solid #1a4a7c !important;
             position: sticky; top: 0; z-index: 9999;
             height: 60px !important;
         }
-        .nav-title { font-size: 16px; font-weight: 800; color: #1a4a7c; text-decoration: none; }
-        .nav-links a { font-size: 14px; font-weight: 700; color: #2eaadc; text-decoration: none; margin-left: 15px; }
+        .nav-brand { font-size: 20px; font-weight: 800; color: #1a4a7c; text-decoration: none; }
+        .nav-links a { font-size: 16px; font-weight: 700; color: #2eaadc; text-decoration: none; margin-left: 15px; }
 
-        /* 3. 텍스트 가독성 조절 */
-        .hero-text { padding: 30px 20px; text-align: center; background: #f0f7ff; }
-        .hero-text h1 { font-size: 26px !important; margin: 0 0 15px 0; }
-        .story-box { background: #fff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; text-align: left; }
-        .story-box p { font-size: 16px !important; line-height: 1.6; margin: 0; }
+        /* 4. 글씨 크기 대폭 확대 */
+        .hero-box { padding: 40px 20px; text-align: center; background: #f8fbff; }
+        .hero-box h1 { font-size: 32px !important; margin: 0 0 15px 0; color: #111; }
+        .story-text { 
+            background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #ddd; 
+            text-align: left; font-size: 18px !important; color: #333; 
+        }
 
-        /* 4. 사진 2열 배치 강제 설정 */
-        .grid-container { display: flex !important; flex-wrap: wrap !important; padding: 10px; gap: 10px; justify-content: center; }
-        .grid-item { 
+        /* 5. 무조건 2열 배치 (가로로 두 장씩) */
+        .section-title { font-size: 24px; font-weight: 800; text-align: center; margin: 40px 0 20px 0; color: #1a4a7c; }
+        .flex-grid { 
+            display: flex !important; flex-wrap: wrap !important; 
+            padding: 0 10px; gap: 10px; justify-content: center;
+        }
+        .item-card { 
             width: calc(50% - 10px) !important; 
-            border: 1px solid #eee; border-radius: 8px; background: #fff;
-            overflow: hidden; text-align: center; padding-bottom: 10px;
+            border: 1px solid #eee; border-radius: 10px; background: #fff;
+            text-align: center; padding-bottom: 15px; overflow: hidden;
         }
 
-        /* 가방 사진 */
-        .grid-item img.bag-img { width: 100% !important; height: 150px !important; object-fit: cover !important; }
-
-        /* 멤버 사진 (동그란 형태 유지) */
-        .member-circle { 
-            width: 70px !important; height: 70px !important; 
+        /* 사진 설정 */
+        .bag-photo { width: 100% !important; height: 160px !important; object-fit: cover !important; }
+        .member-photo-wrap { 
+            width: 80px !important; height: 80px !important; 
             margin: 15px auto 10px; border-radius: 50%; 
-            overflow: hidden; border: 1px solid #eee; background: #f9f9f9;
+            overflow: hidden; border: 2px solid #f0f7ff;
         }
-        .member-circle img { width: 100%; height: 100%; object-fit: cover; }
+        .member-photo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* 멤버 텍스트 복구 */
+        .item-card h4 { font-size: 17px; margin: 8px 0 3px 0; color: #111; }
+        .item-card .position { font-size: 13px; color: #1a4a7c; font-weight: 700; display: block; }
 
         /* 하단 버튼 */
-        .bottom-bar { position: fixed; bottom: 0; width: 100%; display: flex; padding: 12px; background: #fff; gap: 8px; border-top: 1px solid #eee; z-index: 9999; }
-        .btn { flex: 1; padding: 15px 0; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; }
-        .btn-order { background: #1a4a7c; color: #fff; }
-        .btn-insta { background: #e1306c; color: #fff; }
+        .fixed-bottom { position: fixed; bottom: 0; width: 100%; display: flex; padding: 12px; background: #fff; gap: 8px; border-top: 1px solid #eee; z-index: 9999; }
+        .action-btn { flex: 1; padding: 16px 0; text-align: center; text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 16px; }
+        .order-btn { background: #1a4a7c; color: #fff; }
+        .insta-btn { background: #e1306c; color: #fff; }
     </style>
 </head>
 <body>
 
     <div class="top-banner"><img src="logo.png"></div>
 
-    <nav>
-        <a href="#" class="nav-title">ClosticBags</a>
+    <nav class="main-nav">
+        <a href="#" class="nav-brand">ClosticBags</a>
         <div class="nav-links">
             <a href="#shop">Shop</a>
             <a href="YOUR_NOTION_URL" target="_blank">Journey ↗</a>
         </div>
     </nav>
 
-    <div class="hero-text">
+    <div class="hero-box">
         <h1>To Donate and Save</h1>
-        <div class="story-box">
-            <p><b>ClosticBags</b> transforms old T-shirts into reusable bags. All profits support those in need. 🌿</p>
+        <div class="story-text">
+            <b>ClosticBags</b> (Cloth + Plastic bag) transforms old T-shirts into reusable bags. All profits support those in need. 🌿
         </div>
     </div>
 
-    <h2 style="text-align:center; margin-top:30px; font-size:20px; color:#1a4a7c;">Select Your Style</h2>
-    <div class="grid-container" id="shop">
-        <div class="grid-item">
-            <img src="fringe_bag.jpg" class="bag-img">
-            <h4 style="margin:8px 0; font-size:15px;">Fringe Style</h4>
+    <h2 class="section-title">Select Your Style</h2>
+    <div class="flex-grid" id="shop">
+        <div class="item-card">
+            <img src="fringe_bag.jpg" class="bag-photo">
+            <h4>Fringe Style</h4>
         </div>
-        <div class="grid-item">
-            <img src="clean_bag.jpg" class="bag-img">
-            <h4 style="margin:8px 0; font-size:15px;">Clean Style</h4>
-        </div>
-    </div>
-
-    <h2 style="text-align:center; margin-top:30px; font-size:20px; color:#1a4a7c;">Meet Our Team</h2>
-    <div class="grid-container" style="padding-bottom: 100px;">
-        <div class="grid-item">
-            <div class="member-circle"><img src="kayla.jpg"></div>
-            <h4 style="margin:5px 0; font-size:14px;">Kayla</h4>
-            <span style="font-size:11px; color:#777;">Founder</span>
-        </div>
-        <div class="grid-item">
-            <div class="member-circle"><img src="ava.jpg"></div>
-            <h4 style="margin:5px 0; font-size:14px;">Ava</h4>
-            <span style="font-size:11px; color:#777;">Founder</span>
-        </div>
-        <div class="grid-item">
-            <div class="member-circle"><img src="sue.jpg"></div>
-            <h4 style="margin:5px 0; font-size:14px;">Sue</h4>
-            <span style="font-size:11px; color:#777;">USA President</span>
-        </div>
-        <div class="grid-item">
-            <div class="member-circle"><img src="abby.jpg"></div>
-            <h4 style="margin:5px 0; font-size:14px;">Abby</h4>
-            <span style="font-size:11px; color:#777;">HK President</span>
+        <div class="item-card">
+            <img src="clean_bag.jpg" class="bag-photo">
+            <h4>Clean Style</h4>
         </div>
     </div>
 
-    <div class="bottom-bar">
-        <a href="https://instagram.com/wear2care_25" target="_blank" class="btn btn-insta">Instagram</a>
-        <a href="YOUR_GOOGLE_FORM_URL" target="_blank" class="btn btn-order">Order Now</a>
+    <h2 class="section-title">Meet Our Team</h2>
+    <div class="flex-grid" style="padding-bottom: 120px;">
+        <div class="item-card">
+            <div class="member-photo-wrap"><img src="kayla.jpg"></div>
+            <h4>Kayla Choi</h4>
+            <span class="position">Founder / President</span>
+        </div>
+        <div class="item-card">
+            <div class="member-photo-wrap"><img src="ava.jpg"></div>
+            <h4>Ava Choi</h4>
+            <span class="position">Founder / Director</span>
+        </div>
+        <div class="item-card">
+            <div class="member-photo-wrap"><img src="sue.jpg"></div>
+            <h4>Sue Lee</h4>
+            <span class="position">USA President</span>
+        </div>
+        <div class="item-card">
+            <div class="member-photo-wrap"><img src="abby.jpg"></div>
+            <h4>Abby Lee</h4>
+            <span class="position">HK President</span>
+        </div>
+    </div>
+
+    <div class="fixed-bottom">
+        <a href="https://instagram.com/wear2care_25" target="_blank" class="action-btn insta-btn">Instagram</a>
+        <a href="YOUR_GOOGLE_FORM_URL" target="_blank" class="action-btn order-btn">Order Now</a>
     </div>
 
 </body>
